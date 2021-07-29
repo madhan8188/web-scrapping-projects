@@ -21,9 +21,6 @@ except:
 
 
 def proxy_service(url):
-    proxy = {"http": "http://scraperapi:3eb4439145e1cb46ae8f50ba23733e9f@proxy-server.scraperapi.com:8001",
-                        "https": "http://scraperapi:3eb4439145e1cb46ae8f50ba23733e9f@proxy-server.scraperapi.com:8001"
-                    }
     r = requests.get(url, proxies = proxy, verify = False)
     print("request with proxy",r)
     return r
